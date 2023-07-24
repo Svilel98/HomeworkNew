@@ -686,6 +686,7 @@ public class Main {
         }
         System.out.println(count);
     }
+
     public static void task38() {
 
         System.out.println("Задача 38");
@@ -693,8 +694,9 @@ public class Main {
         String secondString = "hi";
         int originSize = origin.length();
         String newString = origin.replaceAll(secondString, "");
-        System.out.println((originSize - newString.length())/secondString.length());
+        System.out.println((originSize - newString.length()) / secondString.length());
     }
+
     public static void task39() {
 
         System.out.println("Задача 39");
