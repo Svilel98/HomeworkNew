@@ -44,6 +44,7 @@ public class Author {
         return name.equals(a2.name);
     }
 
+
     @Override
     public int hashCode() {
         return java.util.Objects.hash(name);

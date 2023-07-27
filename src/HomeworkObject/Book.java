@@ -5,9 +5,9 @@ import HomeworkObject.Author;
 public class Book {
     private Author author;
 
-    String nameBook;
+    private String nameBook;
 
-    int age;
+    private int age;
 
     public Author getAuthor() {
         return this.author;
@@ -30,19 +30,21 @@ public class Book {
     public String toString() {
         return nameBook + " " + age + " " + author;
     }
+
     @Override
     public boolean equals(Object other) {
         if (this.getClass() != other.getClass()) {
             return false;
         }
         Book a2 = (Book) other;
-        return nameBook.equals(a2.nameBook);
+        return author.equals(a2.author) && nameBook.equals(a2.nameBook) && a2.age == age;
     }
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(nameBook);
+        return java.util.Objects.hash(nameBook, author, age);
     }
+
     public Book(String nameBook, int age, Author author) {
         this.nameBook = nameBook;
         this.age = age;
