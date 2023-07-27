@@ -41,13 +41,13 @@ public class Author {
             return false;
         }
         Author a2 = (Author) other;
-        return name.equals(a2.name);
+        return name.equals(a2.name) && name.equals(a2.surname);
     }
 
 
     @Override
     public int hashCode() {
-        return java.util.Objects.hash(name);
+        return java.util.Objects.hash(name, surname);
     }
 
 }
