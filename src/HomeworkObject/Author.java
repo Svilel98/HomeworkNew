@@ -41,7 +41,7 @@ public class Author {
             return false;
         }
         Author a2 = (Author) other;
-        return name.equals(a2.name) && name.equals(a2.surname);
+        return name.equals(a2.name) && surname.equals(a2.surname);
     }
 
 
